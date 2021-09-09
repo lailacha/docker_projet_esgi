@@ -1,0 +1,114 @@
+body{
+    background-color: rgba(222, 222, 222, 0.53);
+    font-family: Baloo;
+}
+
+.flex
+{
+    display: flex;
+}
+
+m-auto
+{
+    margin: auto;
+}
+
+.txt-center
+{
+    text-align: center;
+}
+.container
+{
+padding: 2em;
+}
+.row
+{
+    flex-direction: row;
+}
+
+.col
+{
+    flex-direction: column;
+}
+.center
+{
+    justify-content: center;
+    align-items: center
+}
+
+.sign-card
+{
+    background-color: lavender;
+    height: 50vh;
+    width: 50%;
+    margin: auto;
+    border-radius: 5em;
+    margin-top: 2em;
+    border: 1px solid black;
+}
+
+.mt-2
+{
+    margin-top: 2em;
+}
+
+
+.mt-1
+{
+    margin-top: 1em;
+}
+
+.mt-3
+{
+    margin-top: 3em;
+}
+.sign-card h1
+{
+   color: #6464ca;
+}
+
+.blue-ocean{
+    background-color: #6464ca;
+}
+
+
+.h-2{
+    height: 2em;
+}
+.white-text
+{
+    color: white;
+}
+
+.sign-card button
+{
+    height: 35px;
+    font-size: 17px;
+}
+
+.rounded-50
+{
+    border-radius: 50%;
+}
+
+.rounded-25
+{
+    border-radius: 25px;
+}
+input[type=text], input[type=password]{
+    border-radius: 5px;
+    height: 28px;
+    font-weight: bold;
+}
+
+#users-list{
+    background-color: lavender;
+    width: 80%;
+}
+
+#users-list th
+{
+    font-size: 25px;
+   background-color: #6464ca;
+    color: white;
+}
