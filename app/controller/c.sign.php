@@ -4,7 +4,7 @@ if (isset($_REQUEST['action'])) {
 
     $action = $_REQUEST['action'];
     switch ($action) {
-        case 'sign_up';
+        case 'sign_up':
             if (!empty($_POST['username']) && !empty($_POST['mail']) && !empty($_POST['password']) && !empty($_POST['password_verify'])) {
 
                 if ($_POST['password'] != $_POST['password_verify']) {
@@ -24,12 +24,14 @@ if (isset($_REQUEST['action'])) {
                             $errorMessage = "Il existe déjà un compte associé à cette adresse mail";
                             $conditionSucces = false;
                         } else {
+                            if (check_mdp_force($_POST['password']) == false)
+                            { $errorMessage = "Le mot de passe est trop faible. Il doit contenir plus de 8 caractères, et au moins une majscule, un caractère spécial";
+                                $conditionSucces = false;
+                            }else {
+                                $conditionSucces = true;}
                         }
-                    if (check_mdp_force($_POST['password']) == false)
-                    { $errorMessage = "Le mot de passe est trop faible. Il doit contenir plus de 8 caractères, et au moins une majscule, un caractère spécial";
-                        $conditionSucces = false;
-                    }
                 }
+                
             } else {
                 $errorMessage = "Veuillez remplir tous les champs";
             }
